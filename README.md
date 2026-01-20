@@ -419,7 +419,7 @@ Take Profit: 103 trades (52.3%), avg $11,684.96
 Stop Loss: 84 trades (42.6%), avg -$10,867.86  
 Time Stop: 10 trades (5.1%), avg -$2,156.34  
 
-Market Maker Economics: This scenario represents firms that internalize order flow—capturing spread and offsetting commission costs with exchange rebates or payment for order flow. The $0.05 per lot commission ($0.025 pips) reflects net cost after rebates. These firms don't pay retail spreads because they are the market makers.  
+Market Maker Economics: This scenario represents firms that internalize order flow—capturing spread and offsetting commission costs with exchange rebates or payment for order flow. The 0.05 pips per lot commission (0.025 pips) reflects net cost after rebates. These firms don't pay retail spreads because they are the market makers.  
 The 17.9% cost burden consumed $233,064.20. Breaking down per trade:  
 
 Revenue per trade: $394k / 197 = $2,000  
@@ -458,8 +458,8 @@ The two scenarios reveal why statistical arbitrage strategies remain confined to
 
 Market Makers offset commission with rebates but still pay low net costs. For 200-lot average positions:  
 
-Commission: 200 lots × $0.05 = $10 per round-trip  
-Over 197 trades: $10 × 197 = $1,970 theoretical  
+Commission: 200 lots × 0.05pips = $100 per round-trip  
+Over 197 trades: $100 × 197 = $19,700 theoretical  
 Actual $79k suggests average positions closer to 200 lots due to equity growth  
 
 Market makers capture spread on the other side of their business (selling to retail clients at wider spreads), making the net economics attractive despite visible commission costs.  
