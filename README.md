@@ -22,9 +22,9 @@ noise.
 
 Forward testing on out-of-sample data detected 46 additional anomaly clusters 
 and generated 197 trades. The market maker scenario (0.05 pips commission per 
-lot, zero spread, stochastic slippage) achieved 57.4% win rate and $394,000 
+lot, zero spread, stochastic slippage) achieved 57.4% win rate and $265,749.27 
 profit (2.66% return, Sharpe 2.72). The principal trader scenario (zero 
-commission, zero spread, slippage only) achieved $436,000 profit (3.47% return, 
+commission, zero spread, slippage only) achieved $347,304.99 profit (3.47% return, 
 Sharpe 3.00). Transaction costs consumed 17.9% of gross profits in the market 
 maker setup, highlighting why this edge remains inaccessible to retail traders.  
 
@@ -389,8 +389,9 @@ Despite detecting 46 clusters, zero Tier 3 signals generated due to additional f
 
 **Performance Summary**:  
 Initial Capital: $10,000,000  
-Final Capital: $10,394,000  
+Final Capital: $10,265,749.27  
 Total P&L: $394,000  
+Total Profit: $265,749.27  
 Total Return: 2.66%  
 
 **Trade Statistics**  
@@ -419,7 +420,7 @@ Stop Loss: 84 trades (42.6%), avg -$10,867.86
 Time Stop: 10 trades (5.1%), avg -$2,156.34  
 
 Market Maker Economics: This scenario represents firms that internalize order flow—capturing spread and offsetting commission costs with exchange rebates or payment for order flow. The $0.05 per lot commission ($0.025 pips) reflects net cost after rebates. These firms don't pay retail spreads because they are the market makers.  
-The 17.9% cost burden consumed $233k of the $627k gross profit. Breaking down per trade:  
+The 17.9% cost burden consumed $233,064.20. Breaking down per trade:  
 
 Revenue per trade: $394k / 197 = $2,000  
 Cost per trade: $233k / 197 = $1,183  
@@ -431,8 +432,9 @@ For retail traders paying 0.5-1.0 pip spreads plus commission, this strategy wou
 **D. Principal Trader Scenario: Zero Commission Trading**  
 **Performance Summary:**  
 Initial Capital: $10,000,000  
-Final Capital: $10,436,000  
-Total P&L: $436,000  
+Final Capital: $10,347,304.99 
+Total P&L: $436,000   
+Total Profit: $347,304.99  
 Total Return: 3.47%  
 
 **Risk Metrics:**  
@@ -447,9 +449,9 @@ Slippage as % of Gross P&L: 11.6%
 
 Principal Trading Economics: This scenario represents proprietary trading firms or institutional desks trading principal capital. They bypass external brokers entirely, eliminating commission and spread costs. The only execution friction is slippage—market impact and timing differences between signal generation and fill.  
 
-The zero-cost scenario increased profits by $42k (10.7% improvement over market maker) and boosted Sharpe ratio from 2.72 to 3.00. The reduced drawdown (-1.10% vs -1.25%) suggests execution costs amplify downside volatility.  
+The zero-cost scenario increased profits by $81,556 (30.7% improvement over market maker) and boosted Sharpe ratio from 2.72 to 3.00. The reduced drawdown (-1.10% vs -1.25%) suggests execution costs amplify downside volatility.  
 
-Critical Insight: The $154k slippage cost remained identical across both scenarios because I used the same stochastic model with fixed random seed (42). This isolates the impact of commission and spread—the $42k difference comes purely from eliminating the $79k commission burden.  
+Critical Insight: The $154k slippage cost remained identical across both scenarios because I used the same stochastic model with fixed random seed (42). This isolates the impact of commission and spread—the $81,556 difference comes purely from eliminating the $79k commission burden.  
 
 **E. Comparison: Why Business Model Matters**  
 The two scenarios reveal why statistical arbitrage strategies remain confined to institutional players:  
@@ -462,7 +464,7 @@ Actual $79k suggests average positions closer to 200 lots due to equity growth
 
 Market makers capture spread on the other side of their business (selling to retail clients at wider spreads), making the net economics attractive despite visible commission costs.  
 
-Principal Traders skip external costs entirely, accessing pure statistical edge. The 3.47% return over two weeks ($436k on $10M) with 3.00 Sharpe represents exceptional performance by any standard. Scaling conservatively (assuming 50% persistence) yields 90% annualized return—extraordinary for institutional standards.  
+Principal Traders skip external costs entirely, accessing pure statistical edge. The 3.47% return over two weeks ($347,304.99 on $10M) with 3.00 Sharpe represents exceptional performance by any standard. Scaling conservatively (assuming 50% persistence) yields 90% annualized return—extraordinary for institutional standards.  
 
 Short Holding Periods Minimize Risk: The 122-tick average (approximately 2 minutes) holding period is crucial. Both scenarios benefit from rapid capital turnover—the same $10M generates 197 round-trips over 14 days. This high turnover combined with 57.4% win rate and tight risk controls (-1.25% max drawdown) creates the attractive risk-adjusted returns.  
 
@@ -494,7 +496,7 @@ Realistic Institutional Assessment:
 
 For a market maker internalizing 200-lot EUR/USD flow with $10M capital:  
 
-2.66% over 2 weeks = $394k profit  
+2.66% over 2 weeks = $265,749.27 profit  
 Trading ~14 tickets per day  
 Sharpe 2.72 with -1.25% max drawdown  
 
@@ -502,31 +504,40 @@ This is exceptional. Most market makers target 15-25% annual ROI with similar Sh
 
 For principal traders achieving 3.47% with zero commission:  
 
-$436k profit over 2 weeks  
+$347,304.99 profit over 2 weeks  
 Sharpe 3.00 with -1.10% drawdown  
 Conservative scaling: 90% annualized return  
 
 This represents institutional-grade alpha that justifies significant capital allocation.  
 
 **C. The Transaction Cost Reality**  
+Market Maker Scenario:  
+Transaction costs consumed $233,064, representing 17.9% of gross P&L. The actual equity gain of $265,749 reflects net profitability after all execution friction.  
+Per-Trade Economics:  
 
-Market Maker Scenario: 17.9% of gross P&L consumed by costs ($233k on $1.3M gross profit) represents the harsh economics of high-frequency trading.  
+Average Win: $11,523 (113 trades)  
+Average Loss: -$10,812 (84 trades)  
+Average Cost per Trade: $233,064 / 197 = $1,183  
+Net Profit per Trade: $265,749 / 197 = $1,349  
 
-Per-trade breakdown:  
+Cost Structure:  
 
-Gross revenue: $1,303k / 197 = $6,614  
-Costs: $233k / 197 = $1,183  
-Net revenue: $394k / 197 = $2,000  
+Commission: $79,803  
+Slippage: $153,261  
+Total: $233,064  
 
-Costs consumed 37.2% of gross revenue per trade. This is sustainable only because:  
+This is sustainable only because: (1) high 57.4% win rate spreads costs across 113 winners, (2) short holding periods (56 ticks average) enable rapid capital recycling, and (3) market makers offset through spread capture on internalized flow.  
 
-High win rate (57.4%) spreads costs across many winners  
-Short holding periods (122 ticks) enable high turnover  
-Market maker economics offset through spread capture on other business  
+Principal Trader Scenario:  
+Eliminating commission achieved $347,305 actual equity gain versus $265,749 for market makers—an $81,556 improvement (+30.7% higher profit).  
+Cost Advantage:  
 
-Principal Trader Scenario: 11.6% of gross P&L consumed by slippage alone ($154k on $1.3M gross). The dramatic reduction versus market maker (17.9% → 11.6%) demonstrates why principal trading firms pursue direct market access aggressively.  
+Total Costs: $153,822 (slippage only)  
+Commission Savings: $79,803  
+Additional Profit: $81,556  
+Sharpe Improvement: 3.00 vs. 2.72  
 
-The $79k commission savings ($436k - $394k = $42k difference, accounting for different slippage realization) represents pure structural advantage. Over a year, this 10.7% improvement compounds significantly.  
+The structural advantage compounds significantly: the $79,803 commission elimination plus improved execution prices from zero commission impact generated $81,556 additional profit.  
 
 **D. Why This Edge Won't Last Forever**  
 Three mechanisms degrade statistical arbitrage edges:  
@@ -556,7 +567,7 @@ Detection Engine: Seven-dimensional anomaly detector combining z-scores, Kyle im
 
 Signal Architecture: Three-tier system scaling conviction to position size, though practical deployment revealed only Tier 1 activated at commercially viable frequencies.  
 
-Execution Simulation: Institutional-grade cost modeling comparing market maker economics ($0.05 commission, $394k profit, 2.66% return, Sharpe 2.72) against principal trader economics ($0 commission, $436k profit, 3.47% return, Sharpe 3.00).  
+Execution Simulation: Institutional-grade cost modeling comparing market maker economics ($0.05 commission, $265,749.27 profit, 2.66% return, Sharpe 2.72) against principal trader economics ($0 commission, $347,304.99 profit, 3.47% return, Sharpe 3.00).  
 
 Performance Validation: 197-trade forward test achieving 57.4% win rate despite 17.9% cost burden in the market maker scenario, demonstrating the edge exists but remains accessible only to institutional players with sub-0.2-pip execution costs.  
 
