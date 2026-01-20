@@ -282,7 +282,7 @@ Panel 3 - Intraday Pattern: Pronounced cyclicality emerged with peak anomaly hou
 
 Panel 4 - Microstructure Lead-Lag: The 10,809 lead events (0.2%) where microstructure anomalies preceded price anomalies represented a 50-fold enrichment over random chance. While 99.8% of observations showed no lead relationship, the 0.2% hit rate indicates genuine predictive power—a "sniper" rather than "spray" signal with high specificity but low sensitivity.  
 
-**PART IV: THE THREE-TIER SIGNAL ARCHITECTURE**  
+# **PART IV: THE THREE-TIER SIGNAL ARCHITECTURE**  
 
 **A. Design Philosophy: Conviction-Based Position Sizing**  
 I designed a three-tier signal hierarchy scaling position size to signal quality. The architecture balances frequency (higher tiers are rarer) against quality (higher tiers have better risk-reward profiles).  
@@ -349,7 +349,7 @@ Tier 1's combination of no persistence requirement, no microstructure confirmati
 
 The key insight: most extreme price moves don't come with multi-dimensional confirmation. They're isolated spikes—potentially noise, potentially the first tick of a new trend, potentially genuine mean-reversion opportunities. Tier 1 bets on the latter with reduced position size.  
 
-# **PART V: FORWARD TESTING RESULTS: TWO INSTITUTIONAL MODELS**  
+# **PART V: FORWARD TESTING RESULTS: TWO INSTITUTIONAL MODELS**   
 
 **A. Execution Framework Specifications**  
 I simulated two distinct institutional cost structures representing different business models in professional FX trading:  
