@@ -494,7 +494,7 @@ Regime Dependence: January 2-16 included specific market conditions. Whether the
 
 Realistic Institutional Assessment:  
 
-For a market maker internalizing 200-lot EUR/USD flow with $10M capital:  
+For a market maker internalizing EUR/USD flow with $10M capital:  
 
 2.66% over 2 weeks = $265,749.27 profit  
 Trading ~14 tickets per day  
