@@ -356,7 +356,7 @@ I simulated two distinct institutional cost structures representing different bu
 
 Scenario 1 - Market Maker / Internalizer:  
 
-Commission: $0.05 per standard lot ($0.025 pips per lot)  
+Commission: 0.05 pips per standard lot (0.025 pips per lot)  
 Spread: 0 pips (internalized execution)  
 Slippage: Stochastic N(μ=-0.05, σ=0.1) pips  
 
